@@ -19,9 +19,8 @@ df = pd.read_csv(inputF)
 countRecs = 0
     
 for ind, i in enumerate(df["link"]):
-    if str(i).find("incoming")> -1 or str(i).find("outgoing") > -1:
+    if (str(i).find("incoming") > -1) or (str(i).find("outgoing") > -1) or (str(i).find("comment") > -1) :
         print(i)
-    
         # webpage link the FOI request page
         response = requests.get(i)
         # response = requests.get("https://www.whatdotheyknow.com/request/guidance_for_local_authorities_o#incoming-1396660")

@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"488e0deb12","applicationID":"54458288","transactionName":"IVcMRUMJCVQDExwUVhNNB0JFSRZQCRY=","queueTime":0,"applicationTime":402,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" />
+
+    <title>
+        Refused call-in request 16/0361/OUTMAJ - a Freedom of Information request to Ministry of Housing, Communities and Local Government - WhatDoTheyKnow
+    </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-afe76651f859e6a7b6b153def0358ae1b959842c02fdc46bc3adca58eb6395b2.ico" />
+
+
+      <!--[if LTE IE 7]>
+<link rel="stylesheet" media="all" href="/assets/responsive/application-lte-ie7-2531c1f8552f2e2e15333dfdf81e55ee84df8d750663eb18c38567c0add188ed.css" title="Main" />
+<![endif]-->
+
+<!--[if IE 8]>
+<link rel="stylesheet" media="all" href="/assets/responsive/application-ie8-784bfb058403cd436bf11f868a1419dd49903e9ac98690dd106c34de84f657d2.css" title="Main" />
+<![endif]-->
+
+<!--[if IE 8]>
+<link rel="stylesheet" media="all" href="/assets/responsive/application-ie8-784bfb058403cd436bf11f868a1419dd49903e9ac98690dd106c34de84f657d2.css" title="Main" />
+<![endif]-->
+
+<!--[if GT IE 8]><!-->
+<link rel="stylesheet" media="all" href="/assets/responsive/application-c7deef45faed890a1b4329922f20e8695a448f47d9d9688c382999c8b9f3e236.css" title="Main" />
+<!--<![endif]-->
+
+  <link rel="stylesheet" media="print" href="/assets/responsive/print-5515337b7df737e1523494a12aea4979743c6ccdf38f02e4d80f1a24a904564d.css" />
+
+
+        <link rel="alternate" type="application/atom+xml" title="New updates for the request 'Refused call-in request 16/0361/OUTMAJ'" href="https://www.whatdotheyknow.com/feed/request/refused_call_in_request_160361ou">
+          <link rel="alternate" type="application/json" title="JSON version of New updates for the request 'Refused call-in request 16/0361/OUTMAJ'" href="https://www.whatdotheyknow.com/feed/request/refused_call_in_request_160361ou.json">
+      <link rel="alternate" type="application/json" title="JSON version of this page" href="/request/refused_call_in_request_160361ou.json">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+<meta property="og:site_name" content="WhatDoTheyKnow" />
+
+  <meta property="og:title" content="Refused call-in request 16/0361/OUTMAJ - a Freedom of Information request to Ministry of Housing, Communities and Local Government" />
+  <meta property="og:type" content="article" />
+
+    <meta property="article:published_time" content="2018-08-02T13:34:13+01:00" />
+    <meta property="article:modified_time" content="2019-06-02T11:49:52+01:00" />
+    <meta property="og:description" content="
+
+Please can you supply under FOI/EIR all/any further documentation relating to the refused call-in request of application no 16/03061/OUTMAJ - Land to the South of Priory Road, Hungerford.
+
+This request is to include correspondence previously identified as &#39;routine&#39; and felt to not fall within the scope of  my previous request
+
+https://www.whatdotheyknow.com/request/documentation_on_request_to_call
+
+Many thanks
+
+Yours faithfully,
+
+J A Giggins" />
+
+
+<meta property="og:image" content="https://www.whatdotheyknow.com/assets/logo-opengraph-7364e4f88fa3b9c60585896328afc549e121122d9e60b50dae573856772700f1.png" />
+<meta property="og:url" content="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou" />
+<meta property="og:image:width" content="256" />
+<meta property="og:image:height" content="256" />
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic' rel='stylesheet' type='text/css'>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57-304bd40da32195818bca2e18ca98fdc3a49888b576ce34af4cb6d6c892adf6a6.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60-4d5d77febe927a43b18fb847478dc95edbf17b7d8495f68acab043e85718581e.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72-31289f93cc88a550f49fff3e7c7a7917a2d08d8b1e27d93f79d59bb8736047cc.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76-57649f2fe461cedab452e1653f895354409cd9b7f64151459c1354c0888a0c49.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114-d68b5eeeb0a995c1192621999096b11984755cdfc4409deb89f3b35b5e12070a.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120-8a239d5ee0f2f2f19237d1c1456b3954fc59279a4abf766b512e4a0f481b8a57.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144-798d38e2c500eb26a604205b3e219330442127e8b09c0bea8b4a9a64b1807807.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152-9c4fc8071aba0792e2b4bc4545a7ab73c8d91febcedd0eeb9fd068f9e20b2080.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180-19e51deb3c587b182086e7bd3b8858ef6401808376234870308d8ef869d84cfe.png" />
+<link rel="icon" type="image/png" href="/assets/favicon-32x32-215bb6a85e6b72ea0070966acac11dc2f4f18c6b179fc8799bb98b0b2989b48e.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/android-chrome-192x192-b7acfae912c5e7cdf83f33f385587f0b66242b3469a28badf839c5e16ad43ed3.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/favicon-96x96-eff95a88a9abaec5a521de2fec7677360a21811e4ee07b05000302533992d6fe.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/assets/favicon-16x16-e38ba65468d18740d207daf98636545a4131fa37a2d3a6bc251c055f2d1d07f2.png" sizes="16x16">
+<link rel="manifest" href="/assets/manifest-e83baaa6f19a46b1b8722ecc1556029a61b4a6a7e173e21d963822432433b8b6.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/assets/mstile-144x144-255eacfff7df363a8d9b7c39fe04c4cdde301ccc79647ffd9c68ff1d853cd329.png">
+<meta name="msapplication-config" content="/assets/browserconfig-d192bb83a2aa383764622bbd1dcf8fdd99b5243f65ae35b8e0d0002d23cf22b0.xml">
+<meta name="theme-color" content="#ffffff">
+
+<meta name="google-site-verification" content="DbAHEzh0igI0rZziSexQh5fTrbRfNPSw8BdmrmNY_70" />
+
+    <!-- Replace the html tag's no-js class with js -->
+    <script>
+      (function(H){
+        H.className = H.className.replace(/\bno-js\b/,'js-loaded')
+      })(document.documentElement);
+    </script>
+  </head>
+  <body class=" ">
+    <div class="entirebody">
+
+    <a href="#content" class="show-with-keyboard-focus-only skip-to-link" tabindex="0">Skip to content</a>
+      <!-- begin popups -->
+        <div class="popup popup--popup popup--standard" role="alert" id="standard-popup">
+  <div class="row">
+    <div class="popup__content">
+      
+      Can you <a href="https://www.mysociety.org/2018/10/19/ensuring-whatdotheyknow-is-around-for-the-next-half-a-million-requests/">help us keep WhatDoTheyKnow.com around for the next half-million requests</a>? We're <a href="https://www.mysociety.org/2018/10/19/help-keep-whatdotheyknow-running-with-your-time-or-expertise/">seeking to fill a number of volunteer roles</a>.
+      <a class="popup__close js-popup__close" aria-label="Close" data-remote="true" rel="nofollow" data-method="delete" href="/announcements/6">
+        <span aria-hidden="true">&times;</span>
+</a>    </div>
+  </div>
+</div>
+
+        <div id="country-message">
+        </div>
+      <!-- end popups -->
+
+      <div id="banner" class="banner " role="banner">
+  <div id="banner_inner" class="banner_inner">
+    <div id="banner_content" class="banner_content">
+      <div class="only-show-for-print">
+        <p class="print-information">Printed from https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou on August 05, 2019 13:22</p>
+      </div>
+      <div class="banner_site-title">
+        <h1><a id="logo" class="site-title__logo" href="/">WhatDoTheyKnow</a></h1>
+      </div>
+
+      <div class="rsp_menu_button">
+        <a href="#banner" class="open"> <i class="icon-menu"></i> Menu </a>
+        <a href="#" class="close"> <i class="icon-menu"></i> Close </a>
+      </div>
+
+      <div id="user_locale_switcher" class="locale-list">
+    <p class="locale-list-trigger ">
+      <strong class="current-locale">English</strong>
+    </p>
+
+    <ul class="available-languages">
+        <li class="available-languages__item">
+          <a href="/cy/request/refused_call_in_request_160361ou">Cymraeg</a>
+        </li>
+    </ul>
+  </div>
+        <div id="logged_in_bar" class="logged_in_bar account-link-menu-item">
+  <a class="sign_in_link" href="/profile/sign_in?r=%2Frequest%2Frefused_call_in_request_160361ou">Sign in or sign up</a>
+</div>
+
+      <div id="navigation_search" class="navigation_search">
+        <form id="navigation_search_form" class="navigation_search_form" method="get" action="/search" role="search">
+          <label class="visually-hidden" for="navigation_search_button">
+            Search
+          </label>
+          <input type="search" name="query" id="navigation_search_button" class="navigation_search_button" placeholder="Search" title="type your search term here" />
+          <button type="submit">
+            <span class="visually-hidden">
+              Submit Search
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="topnav" class="topnav ">
+  <ul id="navigation" class="navigation" role="navigation">
+
+      <li class="">
+  <a id="make-request-link" href="/select_authority">Make a request</a>
+</li>
+
+<li class="selected">
+  <a href="/list/successful">Browse requests</a>
+</li>
+
+<li class="">
+  <a href="/body/list/all">View authorities</a>
+</li>
+
+  <li class=""><a href="/blog">Read blog</a></li>
+
+<li class="">
+  <a href="/help/about">Help</a>
+</li>
+
+<li class="">
+  <a href="/help/volunteers">Volunteer</a>
+</li>
+
+  </ul>
+</div>
+
+  </div>
+</div>
+
+
+
+      <div id="wrapper">
+        <div id="content" role="main">
+
+          <div id="request_show" class="controller_request">
+            
+
+
+
+
+
+
+
+
+
+
+<div class="request-header">
+  <div class="row">
+
+    <h1>Refused call-in request 16/0361/OUTMAJ</h1>
+
+    <div class="request-header__action-bar-container">
+      <div class="request-header__action-bar">
+        <p class="request-header__subtitle ">
+              <a href="/user/j_a_giggins">J A Giggins</a> made this Freedom of Information request to <a href="/body/mhclg">Ministry of Housing, Communities and Local Government</a>
+
+
+
+
+        </p>
+          <div class="request-header__action-bar__actions ">
+              <div id="after_actions" class="after-actions">
+  <ul class="action-menu after-actions__action-menu">
+    <li>
+      <a href="#" class="action-menu__button">Actions</a>
+
+      <ul class="action-menu__menu">
+          <li class="action-menu__menu__item">
+            <span class="action-menu__menu__heading">
+              J A Giggins
+            </span>
+
+            <ul class="action-menu__menu__submenu owner_actions">
+              <li>
+                  <a href="/request/505416/followups/new/1239768#followup">Write a reply</a>
+              </li>
+
+                <li>
+                  <a href="/request/refused_call_in_request_160361ou?update_status=1">Update the status of this request</a>
+                </li>
+
+              <li>
+                <a href="/request/505416/followups/new?internal_review=1#followup">Request an internal review</a>
+              </li>
+            </ul>
+          </li>
+
+        <li class="action-menu__menu__item">
+          <span class="action-menu__menu__heading">
+            Ministry of Housing, Communities and Local Government
+          </span>
+
+          <ul class="action-menu__menu__submenu public_body_actions">
+            <li>
+              <a href="/upload/request/refused_call_in_request_160361ou">Respond to request</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="action-menu__menu__item">
+          <ul class="action-menu__menu__submenu anyone_actions">
+
+              <li>
+               <a href="/request/refused_call_in_request_160361ou/report/new">Report this request</a><span class="action-menu__info-link">
+                <a href="/help/about#reporting">Help</a>
+              </span>
+              </li>
+
+              <li>
+                <a href="/annotate/request/refused_call_in_request_160361ou">Add an annotation</a>
+              </li>
+
+
+            <li>
+              <a href="/request/refused_call_in_request_160361ou/download">Download a zip file of all correspondence</a>
+            </li>
+
+            <li>
+              <a href="/details/request/refused_call_in_request_160361ou">View event history details</a>
+            </li>
+
+            <li>
+              <a tabindex="0" class="js-collapsable-trigger-all" data-text-expanded="Collapse all correspondence" data-text-collapsed="Expand all correspondence">Collapse all correspondence</a>
+            </li>
+
+            <li>
+              <div class="feed_link feed_link_action-menu">
+  <a href="/feed/request/refused_call_in_request_160361ou">RSS feed</a>
+  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" alt=""><path fill="#777777" fill-rule="evenodd" d="M.9 3.04a4.07 4.07 0 0 1 4.06 4.08.6.6 0 0 1-1.2 0A2.88 2.88 0 0 0 .9 4.22a.6.6 0 0 1 0-1.19zM.9 0C4.82 0 8 3.2 8 7.12a.6.6 0 0 1-1.19 0A5.93 5.93 0 0 0 .9 1.19.6.6 0 1 1 .9 0zm.14 5.91a1.04 1.04 0 1 1 0 2.09 1.04 1.04 0 0 1 0-2.09z"/></svg>
+</div>
+
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+                <div class="action-bar__follow">
+    <div class="action-bar__follow-button">
+      <div class="feed_link feed_link_toolbar ">
+        <a class="link_button_green track__action" href="/track/request/refused_call_in_request_160361ou">Follow</a>
+      </div>
+    </div>
+    <div class="action-bar__follower-count">
+      <span id="follow_count">2</span> followers
+    </div>
+  </div>
+
+          </div>
+      </div>
+    </div>
+    <div class="request-status">
+      <div id="request_status" class="request-status-message request-status-message--partially_successful">
+        <i class="icon-standalone icon_partially_successful"></i>
+        <p>The request was <strong>partially successful</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="left_column" class="left_column">
+
+      <div class="ff-print-fix"></div>
+  <div class="outgoing correspondence js-collapsable" id="outgoing-796680">
+    
+
+
+
+    <div class="correspondence__header correspondence__header--with-delivery-status">
+      <span class="correspondence__header__author js-collapsable-trigger">
+        J A Giggins
+      </span>
+
+      <a class="correspondence__header__date" href="/request/refused_call_in_request_160361ou#outgoing-796680">
+          <time datetime="2018-08-02T13:34:13+01:00" title="2018-08-02 13:34:13 +0100"> 2 August 2018</time>
+</a>
+        <div class="correspondence__header__delivery-status">
+          <a class="toggle-delivery-log toggle-delivery-log--delivered js-toggle-delivery-log" data-delivery-status="delivered" href="/outgoing_messages/796680/delivery_status">            Delivered</a>        </div>
+    </div>
+
+    <div class="js-delivery-log-ajax-error" hidden aria-hidden="true" style="display: none; visibility: hidden;">
+      <p>We couldn’t load the mail server logs for this message.</p>
+      <p><a target="_blank" href="/outgoing_messages/796680/delivery_status">Try opening the logs in a new window.</a></p>
+    </div>
+
+    <div class="correspondence_text">
+
+  <p><p>Dear Ministry of Housing, Communities and Local Government,</p>
+
+<p>Please can you supply under FOI/EIR all/any further documentation relating to the refused call-in request of application no 16/03061/OUTMAJ - Land to the South of Priory Road, Hungerford.</p>
+
+<p>This request is to include correspondence previously identified as 'routine' and felt to not fall within the scope of  my previous request</p>
+
+<p><a href="https://www.whatdotheyknow.com/request/documentation_on_request_to_call">https://www.whatdotheyknow.com/request/d...</a></p>
+
+<p>Many thanks</p>
+
+<p>Yours faithfully,</p>
+
+<p>J A Giggins</p></p>
+</div>
+
+
+    <p class="event_actions">
+
+      </p>
+
+      <div class="correspondence__footer">
+          <div class="correspondence__footer__cplink">
+            <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#outgoing-796680">
+            <button class="cplink__button">Link to this</button>
+
+            <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?outgoing_message_id=796680">Report</a>
+          </div>
+      </div>
+
+</div>
+
+
+      <div class="ff-print-fix"></div>
+  <div class="incoming correspondence normal js-collapsable" id="incoming-1202094">
+  <div class="correspondence__header">
+    <span class="correspondence__header__author js-collapsable-trigger">
+        Despatch Box,
+    </span>
+
+    <a class="correspondence__header__date" href="/request/refused_call_in_request_160361ou#incoming-1202094">
+      <time datetime="2018-08-02T15:01:12+01:00" title="2018-08-02 15:01:12 +0100"> 2 August 2018</time>
+</a>  </div>
+
+    
+
+    <div class="correspondence_text">
+
+  <p><p>                            
+<br /> Our reference: 3861460             Information request</p>
+
+<p> --------------------------------------------------------------------------</p>
+
+<p> Dear ‎Madam‏
+<br />  
+<br /> Environmental Information Regulations 2004
+<br />  
+<br /> Thank you for your request for information which was received on 2 August
+<br /> 2018.
+<br />  
+<br /> You requested: 
+<br />  
+<br /> Please can you supply under FOI/EIR all/any further documentation relating
+<br /> to the refused call-in request of application no 16/03061/OUTMAJ - Land to
+<br /> the South of Priory Road, Hungerford.</p>
+
+<p> This request is to include correspondence previously identified as
+<br /> 'routine' and felt to not fall within the scope of my previous request</p>
+
+<p> <a href="https://www.whatdotheyknow.com/request/documentation_on_request_to_call">https://www.whatdotheyknow.com/request/d...</a>
+<br />  
+<br /> I am writing to ask you to clarify your request.  In order that I can
+<br /> assist, would you please provide a start date from which you would like
+<br /> searches undertaken from? 
+<br />  
+<br /> I will not be able to take this matter further without this extra
+<br /> information from you.   Please let me know by 31/10/2018.
+<br />  
+<br />  
+<br />  
+<br /> Yours faithfully
+<br />  
+<br />  
+<br /> John Pierce
+<br />  
+<br />  
+<br />  
+<br />  
+<br /> NOTE: Please do not edit the subject line when replying to this email.</p></p>
+</div>
+
+
+    <p class="event_actions">
+    </p>
+
+    <div class="correspondence__footer">
+        <div class="correspondence__footer__cplink">
+          <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#incoming-1202094">
+          <button class="cplink__button">Link to this</button>
+
+          <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?incoming_message_id=1202094">Report</a>
+        </div>
+    </div>
+
+</div>
+
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+  <div class="outgoing correspondence js-collapsable" id="outgoing-796797">
+    
+
+
+
+    <div class="correspondence__header correspondence__header--with-delivery-status">
+      <span class="correspondence__header__author js-collapsable-trigger">
+        J A Giggins
+      </span>
+
+      <a class="correspondence__header__date" href="/request/refused_call_in_request_160361ou#outgoing-796797">
+          <time datetime="2018-08-02T16:24:16+01:00" title="2018-08-02 16:24:16 +0100"> 2 August 2018</time>
+</a>
+        <div class="correspondence__header__delivery-status">
+          <a class="toggle-delivery-log toggle-delivery-log--delivered js-toggle-delivery-log" data-delivery-status="delivered" href="/outgoing_messages/796797/delivery_status">            Delivered</a>        </div>
+    </div>
+
+    <div class="js-delivery-log-ajax-error" hidden aria-hidden="true" style="display: none; visibility: hidden;">
+      <p>We couldn’t load the mail server logs for this message.</p>
+      <p><a target="_blank" href="/outgoing_messages/796797/delivery_status">Try opening the logs in a new window.</a></p>
+    </div>
+
+    <div class="correspondence_text">
+
+  <p><p>Dear Ministry of Housing, Communities and Local Government,</p>
+
+<p>FAO John Pierce</p>
+
+<p>My previous request was made on 6th November 2017, so any further documentation after that date please.</p>
+
+<p>I'd also be grateful if you could Include any 'routine' documents withheld as being considered outside the scope of my request, particularly (but not exclusively) communications from/to West Berkshire Council. This part of the request to be backdated to April 2017.</p>
+
+<p>Many thanks,</p>
+
+<p>Yours faithfully,</p>
+
+<p>J A Giggins</p></p>
+</div>
+
+
+    <p class="event_actions">
+
+      </p>
+
+      <div class="correspondence__footer">
+          <div class="correspondence__footer__cplink">
+            <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#outgoing-796797">
+            <button class="cplink__button">Link to this</button>
+
+            <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?outgoing_message_id=796797">Report</a>
+          </div>
+      </div>
+
+</div>
+
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+  <div class="outgoing correspondence js-collapsable" id="outgoing-813068">
+    
+
+
+
+    <div class="correspondence__header correspondence__header--with-delivery-status">
+      <span class="correspondence__header__author js-collapsable-trigger">
+        J A Giggins
+      </span>
+
+      <a class="correspondence__header__date" href="/request/refused_call_in_request_160361ou#outgoing-813068">
+          <time datetime="2018-09-04T10:21:45+01:00" title="2018-09-04 10:21:45 +0100"> 4 September 2018</time>
+</a>
+        <div class="correspondence__header__delivery-status">
+          <a class="toggle-delivery-log toggle-delivery-log--delivered js-toggle-delivery-log" data-delivery-status="delivered" href="/outgoing_messages/813068/delivery_status">            Delivered</a>        </div>
+    </div>
+
+    <div class="js-delivery-log-ajax-error" hidden aria-hidden="true" style="display: none; visibility: hidden;">
+      <p>We couldn’t load the mail server logs for this message.</p>
+      <p><a target="_blank" href="/outgoing_messages/813068/delivery_status">Try opening the logs in a new window.</a></p>
+    </div>
+
+    <div class="correspondence_text">
+
+  <p><p>Dear Despatch Box,
+<br />I believe the response to this request is  overdue, following the clarification I sent on 2nd August 2018 via this website and reproduced below. Please can you provide a response.</p>
+
+<p>2nd August 2019
+<br />"Dear Ministry of Housing, Communities and Local Government,
+<br />FAO John Pierce
+<br />My previous request was made on 6th November 2017, so any further documentation after that date please.
+<br />I'd also be grateful if you could Include any 'routine' documents withheld as being considered outside the scope of my request, particularly (but not exclusively) communications from/to West Berkshire Council. This part of the request to be backdated to April 2017.
+<br />Many thanks,
+<br />Yours faithfully,
+<br />J A Giggins"</p>
+
+<p>Yours sincerely,</p>
+
+<p>J A Giggins</p></p>
+</div>
+
+
+    <p class="event_actions">
+
+      </p>
+
+      <div class="correspondence__footer">
+          <div class="correspondence__footer__cplink">
+            <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#outgoing-813068">
+            <button class="cplink__button">Link to this</button>
+
+            <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?outgoing_message_id=813068">Report</a>
+          </div>
+      </div>
+
+</div>
+
+
+      <div class="ff-print-fix"></div>
+  <div class="incoming correspondence normal js-collapsable" id="incoming-1228294">
+  <div class="correspondence__header">
+    <span class="correspondence__header__author js-collapsable-trigger">
+        Despatch Box,
+    </span>
+
+    <a class="correspondence__header__date" href="/request/refused_call_in_request_160361ou#incoming-1228294">
+      <time datetime="2018-09-05T15:41:19+01:00" title="2018-09-05 15:41:19 +0100"> 5 September 2018</time>
+</a>  </div>
+
+    
+
+    <div class="correspondence_text">
+
+  <p><p>Dear Ms Giggins,
+<br />  
+<br /> Thank you for your email. I'm sorry that we have not responded to your
+<br /> request, unfortunately we did not receive your clarification email and
+<br /> were only made aware that you had clarified upon receipt of your latest
+<br /> email.
+<br />  
+<br /> We apologise for this and will endeavour to send you a response to your
+<br /> request as soon as we can.
+<br />  
+<br /> Yours sincerely,
+<br /> MHCLG FOI Team</p>
+
+<p> --------------------------------------------------------------------------</p>
+
+<p> Dear Despatch Box,
+<br /> I believe the response to this request is overdue, following the
+<br /> clarification I sent on 2nd August 2018 via this website and reproduced
+<br /> below. Please can you provide a response.</p>
+
+<p> 2nd August 2019
+<br /> "Dear Ministry of Housing, Communities and Local Government,
+<br /> FAO John Pierce
+<br /> My previous request was made on 6th November 2017, so any further
+<br /> documentation after that date please.
+<br /> I'd also be grateful if you could Include any 'routine' documents withheld
+<br /> as being considered outside the scope of my request, particularly (but not
+<br /> exclusively) communications from/to West Berkshire Council. This part of
+<br /> the request to be backdated to April 2017.
+<br /> Many thanks,
+<br /> Yours faithfully,
+<br /> J A Giggins"</p>
+
+<p> Yours sincerely,</p>
+
+<p> J A Giggins</p>
+
+<p><span class="unfold_link"><a href="?unfold=1#incoming-1228294">show quoted sections</a></span></p></p>
+</div>
+
+
+    <p class="event_actions">
+    </p>
+
+    <div class="correspondence__footer">
+        <div class="correspondence__footer__cplink">
+          <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#incoming-1228294">
+          <button class="cplink__button">Link to this</button>
+
+          <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?incoming_message_id=1228294">Report</a>
+        </div>
+    </div>
+
+</div>
+
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+  <div class="comment_in_request box" id="comment-84852">
+  <div class="comment_content">
+
+    <h2>
+      <a href="/user/j_a_giggins">J A Giggins</a> left an annotation (<time datetime="2018-09-05T17:28:43+01:00" title="2018-09-05 17:28:43 +0100"> 5 September 2018</time>)
+    </h2>
+
+    <div class="comment_in_request_text">
+      <p>
+        I don&#39;t know why @mhclg didn&#39;t receive the clarification but have asked whatdotheyknow.com (via Twitter) if they could investigate.
+      </p>
+    </div>
+
+    <p class="event_actions">
+    </p>
+  </div>
+
+    <div class="correspondence__footer">
+        <div class="correspondence__footer__cplink">
+          <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#comment-84852">
+          <button class="cplink__button button">Link to this</button>
+
+          <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?comment_id=84852">Report</a>
+        </div>
+    </div>
+</div>
+
+
+      <div class="ff-print-fix"></div>
+  <div class="comment_in_request box" id="comment-84861">
+  <div class="comment_content">
+      <div class="user_photo_on_comment">
+        <img src="https://www.whatdotheyknow.com/user/richard_taylor/photo.png" alt="">
+      </div>
+
+    <h2>
+      <a href="/user/richard_taylor">Richard Taylor</a> left an annotation (<time datetime="2018-09-06T15:00:03+01:00" title="2018-09-06 15:00:03 +0100"> 6 September 2018</time>)
+    </h2>
+
+    <div class="comment_in_request_text">
+      <p>
+        WhatDoTheyKnow has responded via Twitter to point to the information  confirming receipt available by clicking on the word &quot;Delivered&quot; in the top right of the message in question. <br><br><a href="https://twitter.com/WhatDoTheyKnow/status/1037650644893663235" rel="nofollow">https://twitter.com/WhatDoTheyKnow/statu...</a><br><br>--<br>Richard - WhatDoTheyKnow.com volunteer
+      </p>
+    </div>
+
+    <p class="event_actions">
+    </p>
+  </div>
+
+    <div class="correspondence__footer">
+        <div class="correspondence__footer__cplink">
+          <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#comment-84861">
+          <button class="cplink__button button">Link to this</button>
+
+          <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?comment_id=84861">Report</a>
+        </div>
+    </div>
+</div>
+
+
+      <div class="ff-print-fix"></div>
+  <div class="comment_in_request box" id="comment-84869">
+  <div class="comment_content">
+
+    <h2>
+      <a href="/user/j_a_giggins">J A Giggins</a> left an annotation (<time datetime="2018-09-06T19:31:06+01:00" title="2018-09-06 19:31:06 +0100"> 6 September 2018</time>)
+    </h2>
+
+    <div class="comment_in_request_text">
+      <p>
+        Many thanks Richard - I wasn&#39;t aware of this new feature, but it&#39;s a fantastic enhancement!
+      </p>
+    </div>
+
+    <p class="event_actions">
+    </p>
+  </div>
+
+    <div class="correspondence__footer">
+        <div class="correspondence__footer__cplink">
+          <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#comment-84869">
+          <button class="cplink__button button">Link to this</button>
+
+          <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?comment_id=84869">Report</a>
+        </div>
+    </div>
+</div>
+
+
+      <div class="ff-print-fix"></div>
+  <div class="incoming correspondence normal js-collapsable" id="incoming-1239768">
+  <div class="correspondence__header">
+    <span class="correspondence__header__author js-collapsable-trigger">
+        Despatch Box,
+    </span>
+
+    <a class="correspondence__header__date" href="/request/refused_call_in_request_160361ou#incoming-1239768">
+      <time datetime="2018-09-26T16:07:07+01:00" title="2018-09-26 16:07:07 +0100">26 September 2018</time>
+</a>  </div>
+
+    
+
+    <div class="correspondence_text">
+    <div class="attachments">
+      <div class="attachments__header">
+        <h3>
+          2 Attachments
+        </h3>
+      </div>
+
+      <ul class="list-of-attachments">
+          <li class="attachment">
+            <a href="/request/505416/response/1239768/attach/2/For%20Release.pdf?cookie_passthrough=1"><img class="attachment__image" alt="Attachment" src="/assets/content_type/icon_application_pdf_large-be89fb9d4a6183f530c1ddb3a6ecdff038786b22c32a2b7de9115a56dbb05dea.png" /></a>
+
+            <p class="attachment__name">
+              For Release.pdf
+            </p>
+
+            <p class="attachment__meta">
+              7.6M
+              <a href="/request/505416/response/1239768/attach/2/For%20Release.pdf?cookie_passthrough=1">Download</a>
+                <a href="/request/505416/response/1239768/attach/html/2/For%20Release.pdf.html">View as HTML</a>
+              
+            </p>
+          </li>
+          <li class="attachment">
+            <a href="/request/505416/response/1239768/attach/3/Response%20some%20exempt.pdf?cookie_passthrough=1"><img class="attachment__image" alt="Attachment" src="/assets/content_type/icon_application_pdf_large-be89fb9d4a6183f530c1ddb3a6ecdff038786b22c32a2b7de9115a56dbb05dea.png" /></a>
+
+            <p class="attachment__name">
+              Response some exempt.pdf
+            </p>
+
+            <p class="attachment__meta">
+              114K
+              <a href="/request/505416/response/1239768/attach/3/Response%20some%20exempt.pdf?cookie_passthrough=1">Download</a>
+                <a href="/request/505416/response/1239768/attach/html/3/Response%20some%20exempt.pdf.html">View as HTML</a>
+              
+            </p>
+          </li>
+      </ul>
+
+      <a href="#" class="attachments__show-more" style="display: none;" data-show-all="Show all attachments" data-show-fewer="Show fewer attachments"></a>
+    </div>
+
+  <p><p>                            
+<br /> Our reference: 3861460             Information request</p>
+
+<p> --------------------------------------------------------------------------</p>
+
+<p>  
+<br /> Dear Sir/Madam
+<br />  
+<br /> Thank you for your request for information concerning application no
+<br /> 16/03061/OUTMAJ - Land to the South of Priory Road, Hungerford. 
+<br />  
+<br /> I have attached my formal response and apologise for the delay in
+<br /> replying.
+<br /> Knowledge and Information Access Team
+<br /> Ministry of Housing, Communities and Local Government</p>
+
+<p>  
+<br /> NOTE: Please do not edit the subject line when replying to this email.</p></p>
+</div>
+
+
+    <p class="event_actions">
+    </p>
+
+    <div class="correspondence__footer">
+        <div class="correspondence__footer__cplink">
+          <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#incoming-1239768">
+          <button class="cplink__button">Link to this</button>
+
+          <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?incoming_message_id=1239768">Report</a>
+        </div>
+    </div>
+
+</div>
+
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+
+      <div class="ff-print-fix"></div>
+  <div class="comment_in_request box" id="comment-88721">
+  <div class="comment_content">
+
+    <h2>
+      <a href="/user/j_a_giggins">J A Giggins</a> left an annotation (<time datetime="2019-07-16T15:53:29+01:00" title="2019-07-16 15:53:29 +0100">16 July 2019</time>)
+    </h2>
+
+    <div class="comment_in_request_text">
+      <p>
+        On far-reaching this correspondence I have noticed reference to at least one telephone call for which information has not been provided. Hopefully MHCLG will quickly be able to double check their casework system and now provide the information.
+      </p>
+    </div>
+
+    <p class="event_actions">
+    </p>
+  </div>
+
+    <div class="correspondence__footer">
+        <div class="correspondence__footer__cplink">
+          <input type="text" id="cplink__field" class="cplink__field" value="https://www.whatdotheyknow.com/request/refused_call_in_request_160361ou#comment-88721">
+          <button class="cplink__button button">Link to this</button>
+
+          <a class="cplink__button button" href="/request/refused_call_in_request_160361ou/report/new?comment_id=88721">Report</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <div class="request-footer__action-bar-container">
+      <div class="request-footer__action-bar__actions">
+          <div id="after_actions" class="after-actions">
+  <ul class="action-menu after-actions__action-menu">
+    <li>
+      <a href="#" class="action-menu__button">Actions</a>
+
+      <ul class="action-menu__menu">
+          <li class="action-menu__menu__item">
+            <span class="action-menu__menu__heading">
+              J A Giggins
+            </span>
+
+            <ul class="action-menu__menu__submenu owner_actions">
+              <li>
+                  <a href="/request/505416/followups/new/1239768#followup">Write a reply</a>
+              </li>
+
+                <li>
+                  <a href="/request/refused_call_in_request_160361ou?update_status=1">Update the status of this request</a>
+                </li>
+
+              <li>
+                <a href="/request/505416/followups/new?internal_review=1#followup">Request an internal review</a>
+              </li>
+            </ul>
+          </li>
+
+        <li class="action-menu__menu__item">
+          <span class="action-menu__menu__heading">
+            Ministry of Housing, Communities and Local Government
+          </span>
+
+          <ul class="action-menu__menu__submenu public_body_actions">
+            <li>
+              <a href="/upload/request/refused_call_in_request_160361ou">Respond to request</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="action-menu__menu__item">
+          <ul class="action-menu__menu__submenu anyone_actions">
+
+              <li>
+               <a href="/request/refused_call_in_request_160361ou/report/new">Report this request</a><span class="action-menu__info-link">
+                <a href="/help/about#reporting">Help</a>
+              </span>
+              </li>
+
+              <li>
+                <a href="/annotate/request/refused_call_in_request_160361ou">Add an annotation</a>
+              </li>
+
+
+            <li>
+              <a href="/request/refused_call_in_request_160361ou/download">Download a zip file of all correspondence</a>
+            </li>
+
+            <li>
+              <a href="/details/request/refused_call_in_request_160361ou">View event history details</a>
+            </li>
+
+            <li>
+              <a tabindex="0" class="js-collapsable-trigger-all" data-text-expanded="Collapse all correspondence" data-text-collapsed="Expand all correspondence">Collapse all correspondence</a>
+            </li>
+
+            <li>
+              <div class="feed_link feed_link_action-menu">
+  <a href="/feed/request/refused_call_in_request_160361ou">RSS feed</a>
+  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" alt=""><path fill="#777777" fill-rule="evenodd" d="M.9 3.04a4.07 4.07 0 0 1 4.06 4.08.6.6 0 0 1-1.2 0A2.88 2.88 0 0 0 .9 4.22a.6.6 0 0 1 0-1.19zM.9 0C4.82 0 8 3.2 8 7.12a.6.6 0 0 1-1.19 0A5.93 5.93 0 0 0 .9 1.19.6.6 0 1 1 .9 0zm.14 5.91a1.04 1.04 0 1 1 0 2.09 1.04 1.04 0 0 1 0-2.09z"/></svg>
+</div>
+
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+            <div class="action-bar__follow">
+    <div class="action-bar__follow-button">
+      <div class="feed_link feed_link_toolbar">
+        <a class="link_button_green track__action" href="/track/request/refused_call_in_request_160361ou">Follow</a>
+      </div>
+    </div>
+    <div class="action-bar__follower-count">
+      <span id="follow_count">2</span> followers
+    </div>
+  </div>
+
+      </div>
+    </div>
+
+    <div class="donate-cta">
+      <h2 class="donate-cta__header">We work to defend the right to FOI for everyone</h2>
+      <p class="donate-cta__para">Help us protect your right to hold public authorities to account. Donate and support our work.</p>
+      <a class="button donate-cta__button" href="http://www.mysociety.org/donate/?utm_campaign=foi_request_page&amp;utm_content=experiment_no_0&amp;utm_medium=link&amp;utm_source=whatdotheyknow.com">Donate Now</a>
+
+    </div>
+
+</div>
+
+<div id="right_column" class="sidebar right_column" role="complementary">
+
+
+  <h2>Act on what you've learnt</h2>
+
+<div class="act_link">
+  <i class="act-link-icon act-link-icon--twitter"></i>
+
+  <a onclick="if (ga) { ga(&#39;send&#39;,&#39;event&#39;,&#39;Outbound Link&#39;,&#39;Twitter Exit&#39;,&#39;Request sidebar&#39;,1) };" href="https://twitter.com/share?related=mySociety%3AHelping+people+set+up+sites+like+WhatDoTheyKnow+all+over+the+world&amp;text=%27Refused+call-in+request+16%2F0361%2FOUTMAJ%27&amp;url=https%3A%2F%2Fwww.whatdotheyknow.com%2Frequest%2Frefused_call_in_request_160361ou&amp;via=whatdotheyknow">Tweet this request</a>
+</div>
+
+<div class="act_link">
+  <i class="act-link-icon act-link-icon--facebook"></i>
+  <a onclick="if (ga) { ga(&#39;send&#39;,&#39;event&#39;,&#39;Outbound Link&#39;,&#39;Facebook Exit&#39;,&#39;Request sidebar&#39;,1) };" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.whatdotheyknow.com%2Frequest%2Frefused_call_in_request_160361ou">Share on Facebook</a>
+</div>
+
+<div class="act_link">
+  <i class="act-link-icon act-link-icon--medium"></i>
+  <a onclick="if (ga) { ga(&#39;send&#39;,&#39;event&#39;,&#39;Outbound Link&#39;,&#39;Medium Exit&#39;,&#39;Request sidebar&#39;,1) };" href="http://medium.com/">Write about this on Medium</a>
+</div>
+
+
+  <div class="act_link">
+  <i class="act-link-icon act-link-icon--write"></i>
+  <a onclick="if (ga) { ga(&#39;send&#39;,&#39;event&#39;,&#39;Outbound Link&#39;,&#39;Write To Them Exit&#39;,&#39;Request sidebar&#39;,1) };" href="http://www.writetothem.com">Write to your politician</a>
+</div>
+
+  
+
+    <div class="sidebar__similar-requests">
+      <h2>Requests like this</h2>
+
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/s106_contributions_and_spend_in?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      S106 contributions and spend in Hungerford
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/west_berkshire_council">West Berkshire Council</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/2011_14_grants?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      2011-14 Grants
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/homes_england">Homes England</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/foi_correspondence_2?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      FOI Correspondence
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/homes_england">Homes England</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/foi_log_for_201112_201213_and_20?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      FOI log for 2011/12, 2012/13 and 2013/14 to date
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/west_berkshire_council">West Berkshire Council</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/historic_foi_logs?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      Historic FOI logs
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/west_berkshire_council">West Berkshire Council</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/consultation_responses_natural_e?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      Consultation Responses - Natural England
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/natural_england">Natural England</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/planning_application_fee_for_pla?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      Planning application fee for planning application 16/03061/OUTMAJ Land South of Priory Road
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/west_berkshire_council">West Berkshire Council</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/documentation_on_request_to_call?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      Documentation on request to call in West Berkshire planning application 16/03061/OUTMAJ -Land to the South of Priory Road, Hungerford.
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/mhclg">Ministry of Housing, Communities and Local Government</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/statement_of_common_grounds_refe?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      Statement of common grounds referenced in Kintbury Irish Hill Appeal
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/west_berkshire_council">West Berkshire Council</a>
+  </p>
+</div>
+
+        
+<div class="request_short_listing">
+  <h3 class="request_short_listing__title">
+    <a href="/request/notes_of_telephone_conversations?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+      Notes of telephone conversations 're refused call-in request for 'Land South of Priory Road, Hungerford' ( aka as Land East of Salisbury Road)
+</a>  </h3>
+
+  <p class="request_short_listing__authority">
+    <a href="/body/mhclg">Ministry of Housing, Communities and Local Government</a>
+  </p>
+</div>
+
+
+        <p class="sidebar_similar_requests__more-link">
+          <a href="/similar/request/refused_call_in_request_160361ou?utm_campaign=alaveteli-experiments-87&amp;utm_content=sidebar_similar_requests&amp;utm_medium=link&amp;utm_source=whatdotheyknow">
+            More similar requests
+</a>        </p>
+    </div>
+
+  <!-- this link with this wording is here for legal reasons, discuss with
+    board and our lawyer before changing or removing it -->
+  <p class="copyright-notice"><small><a href="/help/officers#copyright">Are you the owner of any commercial copyright on this page?</a></small></p>
+</div>
+
+
+
+
+          </div>
+          <div style="clear:both"></div>
+        </div>
+      </div>
+
+      <div class="mysoc-footer" role="contentinfo">
+    <div class="row">
+
+        <div class="col-sm-5">
+            <h2 class="mysoc-footer__site-name">WhatDoTheyKnow</h2>
+            <div class="mysoc-footer__site-description">
+                <p>A site to help anyone submit a Freedom of Information request. WhatDoTheyKnow also publishes and archives requests and responses, building a massive archive of information.</p>
+                <p><a href="/help/credits#helpus">Run by Volunteers</a> and powered by <a href="/help/alaveteli">Alaveteli</a>.</p>
+                <p>Dedicated to <a href="http://mk.ucant.org/archives/000129.html">Chris Lightfoot</a>.</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <nav class="mysoc-footer__links">
+                <ul>
+                    <li role="presentation"><a href="/select_authority">Make a request</a></li>
+                    <li role="presentation"><a href="/list/successful">Browse requests</a></li>
+                    <li role="presentation"><a href="/body/list/all">View authorities</a></li>
+                    <li role="presentation"><a href="/pro">Journalist?</a></li>
+                </ul>
+                <ul>
+                    <li role="presentation"><a href="/help">Help</a></li>
+                    <li role="presentation"><a href="/help/contact">Contact us</a></li>
+                    <li role="presentation"><a href="/help/volunteers">Become a volunteer</a></li>
+                    <li role="presentation"><a href="/help/privacy">Privacy and cookies</a></li>
+                    <li role="presentation"><a href="/help/api">API</a></li>
+                      <li>
+                        <a href="/pro/pages/legal">Pro Terms</a>
+                      </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="mysoc-footer__donate">
+                <p>Your donations keep this site and others like it running</p>
+                <a href="http://www.mysociety.org/donate/?utm_source=whatdotheyknow.com&utm_content=footer+donate+now&utm_medium=link&utm_campaign=mysoc_footer" class="mysoc-footer__donate__button">Donate now</a>
+            </div>
+        </div>
+    </div>
+    <hr class="mysoc-footer__divider" role="presentation">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="mysoc-footer__orgs">
+                <p class="mysoc-footer__org">
+                    Built by
+                    <a href="https://mysociety.org?utm_source=whatdotheyknow.com&utm_content=footer+logo&utm_medium=link&utm_campaign=mysoc_footer" class="mysoc-footer__org__logo mysoc-footer__org__logo--mysociety">mySociety</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="mysoc-footer__legal">
+                <p>mySociety is a project of UK Citizens Online Democracy, a registered charity in England and Wales. For full details visit <a href="https://www.mysociety.org?utm_source=whatdotheyknow.com&utm_content=footer+full+legal+details&utm_medium=link&utm_campaign=mysoc_footer">mysociety.org</a>.</p>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <ul class="mysoc-footer__badges">
+                <li role="presentation"><a href="https://github.com/mysociety/whatdotheyknow-theme" class="mysoc-footer__badge mysoc-footer__badge--github">Github</a></li>
+                <li role="presentation">
+                  <a href="https://twitter.com/whatdotheyknow" class="mysoc-footer__badge mysoc-footer__badge--twitter" onclick="if (ga) { ga(&#39;send&#39;,&#39;event&#39;,&#39;Outbound Link&#39;,&#39;Twitter Exit&#39;,&#39;Footer link&#39;,1) };">@whatdotheyknow</a>
+                </li>
+                <li role="presentation"><a href="https://facebook.com/whatdotheyknowcom" class="mysoc-footer__badge mysoc-footer__badge--facebook" onclick="if (ga) { ga(&#39;send&#39;,&#39;event&#39;,&#39;Outbound Link&#39;,&#39;Facebook Exit&#39;,&#39;Footer link&#39;,1) };">Facebook</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+      <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-24614779-1', 'auto');
+            ga('send', 'pageview', '/request/refused_call_in_request_160361ou');
+
+  ga('require', 'GTM-53XVLCX');
+  ga('send', 'pageview');
+
+      </script>
+
+    <script src="/assets/application-2a8ac249e64af6c4f51ea69e2434c8015566c38f19aee6b4ee135bbca68c0b3f.js"></script>
+
+    
+  <script src="/assets/request-attachments-a3d5a3e8d543511fd05dcf61bda6cecc106315f8a2de930aa79b0a92aae9572f.js"></script>
+  <script src="/assets/tests-45f5c4bb00bd55e66dd6ba273f8b7eb70a3f02f3c87126741db7ef3787407dcb.js"></script>
+
+
+    <script>
+  jQuery('#user_locale_switcher').find('.locale-list-trigger').each(function() {
+    jQuery(this).click(function(){
+      jQuery(this).parent().toggleClass('active');
+    });
+  });
+</script>
+
+
+
+    <a href="#content" class="show-with-keyboard-focus-only skip-to-link">
+      Back to content
+    </a>
+  </body>
+</html>
